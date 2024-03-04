@@ -5,12 +5,10 @@ import {
     CreateTableCommand,
     DeleteTableCommand,
 } from "@aws-sdk/client-dynamodb";
-import { GetCommand, PutCommand, DynamoDBDocumentClient } from "@aws-sdk/lib-dynamodb";
+import { GetCommand, PutCommand } from "@aws-sdk/lib-dynamodb";
 
 
 const dynamodb = new DynamoDB({ endpoint: "http://localhost:8000" });
-
-const docClient = DynamoDBDocumentClient.from(dynamodb);
 
 const TABLE_GPS_INFO = "GpsInfo";
 
